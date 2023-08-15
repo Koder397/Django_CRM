@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Record
 
-# Register your models here.
+
+class RecordAdmin(admin.ModelAdmin):
+	list_display = ('first_name', 'last_name')
+
+admin.site.register(Record)
+# admin.site.register(RecordAdmin)
